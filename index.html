@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Store</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="store">
-        <h1>My Store</h1>
-        <div id="filters">
-            <input type="text" id="search" placeholder="Search for products...">
-            <select id="categories">
-                <option value="">All Categories</option>
-            </select>
-            <input type="number" id="minPrice" placeholder="Min Price">
-            <input type="number" id="maxPrice" placeholder="Max Price">
-            <button onclick="applyFilters()">Apply Filters</button>
-        </div>
-        <div id="sort">
-            <button onclick="sortByPrice()">Sort by Price</button>
-        </div>
-        <div id="shoppingCart">
-            <p>Shopping Cart</p>
-            <div id="cartItems"></div>
-            <p>Total Quantity: <span id="totalQuantity">0</span></p>
-            <p>Total Price: $<span id="totalPrice">0.00</span></p>
-        </div>
-        <div id="products"></div>
-        <div id="pagination"></div>
+      <h1>My Store</h1>
+      <div id="filters">
+        <input type="text" id="search" placeholder="Search for products..." />
+        <select id="categories">
+          <option value="">All Categories</option>
+        </select>
+        <input type="number" id="minPrice" placeholder="Min Price" />
+        <input type="number" id="maxPrice" placeholder="Max Price" />
+        <button onclick="applyFilters()">Apply Filters</button>
+      </div>
+      <div id="sort">
+        <button onclick="sortByPrice()">Sort by Price</button>
+      </div>
+      <div id="shoppingCart">
+        <p>Shopping Cart</p>
+        <div id="cartItems"></div>
+        <p>Total Quantity: <span id="totalQuantity">0</span></p>
+        <p>Total Price: $<span id="totalPrice">0.00</span></p>
+      </div>
+      <div id="products"></div>
+      <div id="pagination"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

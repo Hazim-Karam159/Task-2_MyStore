@@ -19,22 +19,29 @@ h1 {
   margin-bottom: 20px;
 }
 
-#filters, #sort {
+#filters,
+#sort {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-#filters input, #filters select, #filters button, #sort button {
+#filters input,
+#filters select,
+#filters button,
+#sort button {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
+  margin: 5px 0;
 }
 
-#filters button, #sort button {
-  background-color: #4CAF50;
+#filters button,
+#sort button {
+  background-color: #4caf50;
   color: white;
   cursor: pointer;
 }
@@ -55,7 +62,7 @@ h1 {
   background-color: #fff;
   color: #333;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
   border-radius: 8px;
@@ -77,7 +84,7 @@ h1 {
 }
 
 .product button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px;
@@ -91,7 +98,7 @@ h1 {
 }
 
 #pagination button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -103,4 +110,29 @@ h1 {
 #pagination button:disabled {
   background-color: #666;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  #filters,
+  #sort {
+    flex-direction: column;
+  }
+
+  #filters input,
+  #filters select,
+  #filters button,
+  #sort button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .product img {
+    max-height: 200px;
+  }
 }
